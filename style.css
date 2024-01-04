@@ -1,0 +1,96 @@
+/* By default, the width and height of an element is calculated like this:
+
+width + padding + border = actual width of an element
+height + padding + border = actual height of an element */
+
+/*making null css for website intitial clearing ...*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+} 
+
+.container
+{
+    margin:0 auto;
+    max-width:900px;
+}
+
+.apply_box
+{
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 4px 3px 5px rgba(1,1,1,0.1);
+    border-radius: 10px;
+}
+
+body{
+    background-color: grey;
+}
+
+.form_container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+}
+
+.form_control
+{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+input,select,textarea{
+    padding:6px 10px;
+    border: 1px solid grey;
+    font-size: 15px;
+}
+
+input:focus{
+    outline-color: red;
+}
+
+.button_contianer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+button{
+    background-color: red;
+    color:black;
+    font-size: larger;
+    border: transparent solid 2px;
+    padding:5px 10px;
+    border-radius: 5px;
+    transition: 0.3s ease-in;
+}
+
+button:hover{
+    background-color: green;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+/* //here i used this that in address row only one element should present */
+.textarea_control{
+    grid-column: 1 / span 2;
+}
+
+textarea{
+    width:100%;
+}
+
+@media (max-width:650px)
+{
+    .textarea_control{
+        grid-column: 1 / span 1;
+    }
+}
